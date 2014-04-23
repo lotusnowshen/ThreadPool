@@ -29,13 +29,6 @@ void *Thread::thread_func(void *arg) {
 	return NULL;
 }
 
-#include <iostream>
-void Thread::run() {
-
-	while (1) {
-		std::cout << "run" << std::endl;
-	}
-}
 pthread_t Thread::get_tid() const {
 	return _tid;
 }
