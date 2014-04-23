@@ -17,11 +17,11 @@ class WorkThread: public Thread {
 
 public:
 	void run();
-	void register_thread_pool(ThreadPool *p_thread_pool);
-	void compute_task(int num);
+	void register_thread_pool(ThreadPool *p_thread_pool); //注册线程池
+	void compute_task(int num);   //实际的工作函数，由run来调用
 
 private:
-	ThreadPool *_p_thread_pool;
+	ThreadPool *_p_thread_pool; //线程池的指针，用来指定线程去哪里获取任务
 
 
 };

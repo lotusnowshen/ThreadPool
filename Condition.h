@@ -20,11 +20,11 @@ public:
 
 	void wait();
 	void notify();
-	void notify_all();
+	void notify_all(); //谨慎使用
 
 private:
 	pthread_cond_t _cond;
-	MutexLock *_p_lock;
+	MutexLock *_p_lock;  //这里的lock要用指针
 
 };
 
